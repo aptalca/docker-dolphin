@@ -12,7 +12,7 @@ On unRaid, install from the Community Repositories and enter the app folder loca
 On other platforms, you can run this docker with the following command:
 
 ```
-docker run -d --name="Dolphin" -e WIDTH="1280" -e HEIGHT="720" -v /path/to/config:/config:rw -v /other/mount/point:/mnt:rw -v /etc/localtime:/etc/localtime:ro -p XXXX:8080 -p YYYY:3389 aptalca/docker-dolphin
+docker run -d --name="Dolphin" -e USER_ID="99" -e GROUP_ID="100" -e WIDTH="1280" -e HEIGHT="720" -v /path/to/config:/config:rw -v /other/mount/point:/mnt:rw -v /etc/localtime:/etc/localtime:ro -p XXXX:8080 -p YYYY:3389 aptalca/docker-dolphin
 ```
 
 #### Setup Instructions
@@ -20,6 +20,7 @@ docker run -d --name="Dolphin" -e WIDTH="1280" -e HEIGHT="720" -v /path/to/confi
 - Change "XXXX" to a port of your choice, it will be the port for the Docker GUI in browser
 - Change "YYYY" to a port of your choice, it will be the remote desktop port (optional and only needed if you want to connect via RDP client)
 - If you'd like to change the resolution for the GUI, you can modify the WIDTH and HEIGHT variables
+- By default, dolphin runs as nobody:users (99:100). If you want to give it root access, change the USER_ID and GROUP_ID variables in the docekr run command above to 0.
 
 You can access the GUI by pointing your web browser to http://SERVERIP:XXXX/#/client/c/Dolphin
 
