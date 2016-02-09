@@ -12,7 +12,7 @@ On unRaid, install from the Community Repositories and enter the app folder loca
 On other platforms, you can run this docker with the following command:
 
 ```
-docker run -d --name="Dolphin" -e EDGE="0" -e WIDTH="1280" -e HEIGHT="720" -v /path/to/config:/config:rw -v /other/mount/point:/mnt:rw -v /etc/localtime:/etc/localtime:ro -p XXXX:8080 -p YYYY:3389 aptalca/docker-dolphin
+docker run -d --name="Dolphin" -e WIDTH="1280" -e HEIGHT="720" -v /path/to/config:/config:rw -v /other/mount/point:/mnt:rw -v /etc/localtime:/etc/localtime:ro -p XXXX:8080 -p YYYY:3389 aptalca/docker-dolphin
 ```
 
 ###Setup Instructions
