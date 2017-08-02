@@ -37,6 +37,7 @@ apt-get update && \
 apt-get install -y \
 dolphin \
 konsole
+kate
 
 #########################################
 ##          GUI APP INSTALL            ##
